@@ -6,7 +6,6 @@ socketIo.connect = (httpServer) => {
   io = new Server(httpServer, { cors: { origin: "*" }, transports: ["websocket", "polling"] });
 
   io.on("connection", (socket) => {
-    console.log("connectedss");
     count++;
     // socket.on("eventtt", (data) => {
     //   console.log(data);
